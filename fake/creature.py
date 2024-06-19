@@ -1,4 +1,4 @@
-from model import Creature
+from model.creature import Creature
 
 _creatures: list[Creature] = [
     Creature(
@@ -25,5 +25,28 @@ _creatures: list[Creature] = [
 ]
 
 
-def get_creatures() -> list[Creature]:
+def get_all() -> list[Creature]:
     return _creatures
+
+
+def get_one(name: str) -> Creature | None:
+    for _creature in _creatures:
+        if _creature.name == name:
+            return _creature
+    return None
+
+
+def create(crature: Creature) -> Creature:
+    return crature
+
+
+def modify(crature: Creature) -> Creature:
+    return crature
+
+
+def replace(crature: Creature) -> Creature:
+    return crature
+
+
+def delete(name: str):
+    return None

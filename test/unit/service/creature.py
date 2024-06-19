@@ -1,8 +1,8 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class Creature(BaseModel):
-    name: str = Field(..., min_length=2)
+    name: str
     country: str
     area: str
     description: str
