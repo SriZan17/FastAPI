@@ -1,4 +1,10 @@
-from creature import Creature
+# import sys
+# import os
+
+# myDir = os.getcwd()
+# sys.path.append(myDir)
+
+from model.creature import Creature
 from service import creature as code
 
 sample = Creature(
