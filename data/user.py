@@ -53,6 +53,7 @@ def create(user: User, table: str = "user"):
     try:
         curs.execute(qry, params)
         curs.connection.commit()
+        return get_one(user.name)
     except IntegrityError:
         raise Duplicate(msg=f"{table}: user {user.name} already exists")
 

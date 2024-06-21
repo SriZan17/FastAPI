@@ -1,8 +1,12 @@
 from fastapi import APIRouter, HTTPException
 from model.explorer import Explorer
-import data.explorer as service
 from error import Duplicate, Missing
+import os
 
+if os.getenv("CRYPTID_UNIT_TEST"):
+    from fake import explorer as service
+else:
+    from service import explorer as service
 router = APIRouter(prefix="/explorers")
 
 

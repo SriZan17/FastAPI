@@ -29,7 +29,7 @@ def create(explorer: Explorer) -> Explorer:
     return explorer
 
 
-def modify(explorer: Explorer) -> Explorer:
+def modify(name: str, explorer: Explorer) -> Explorer:
     return explorer
 
 

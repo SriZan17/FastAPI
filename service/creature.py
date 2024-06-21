@@ -1,5 +1,10 @@
 from model.creature import Creature
-import fake.creature as data
+import os
+
+if os.getenv("CRYPTID_UNIT_TEST"):
+    from fake import creature as data
+else:
+    from data import creature as data
 
 
 def get_all() -> list[Creature]:
@@ -14,8 +19,8 @@ def create(creature: Creature) -> Creature:
     return data.create(creature)
 
 
-def replace(id, creature: Creature) -> Creature:
-    return data.replace(id, creature)
+# def replace(id, creature: Creature) -> Creature:
+#    return data.replace(id, creature)
 
 
 def modify(id, creature: Creature) -> Creature:

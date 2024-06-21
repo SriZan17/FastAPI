@@ -36,12 +36,12 @@ def get_one(name: str) -> Creature | None:
     return None
 
 
-def create(crature: Creature) -> Creature:
-    return crature
+def create(creature: Creature) -> Creature:
+    return creature
 
 
-def modify(crature: Creature) -> Creature:
-    return crature
+def modify(name: str, creature: Creature) -> Creature:
+    return creature
 
 
 def replace(crature: Creature) -> Creature:
